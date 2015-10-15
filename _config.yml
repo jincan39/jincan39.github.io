@@ -31,8 +31,8 @@ owner:
   avatar: photo.jpg
   bio: "Helo.<br /> This is A developer just graduated and from Shanghai."
   email: jincan39@163.com
-  duoshuo-shortname: jincan39
-  disqus-shortname: 
+  duoshuo-shortname: true
+  disqus-shortname:
   twitter: #username
   facebook: #username
   google:
@@ -50,14 +50,14 @@ owner:
   instagram: #username
   lastfm: #username
   tumblr: #username
-  pinterest: #jincan39
+  pinterest: #username
   foursquare: #username
   steam: #username
   dribbble: #username
   youtube: #username
   soundcloud: #username
   weibo: #1287554400
-  flickr: # jincan39
+  flickr: # username
   codepen: #username
   
 
