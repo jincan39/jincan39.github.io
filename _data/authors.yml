@@ -1,0 +1,41 @@
+# Authors
+
+jin_can:
+  name: Chan King
+  # web: http://github.com/jincan39
+  email: jincan39@163.com
+  bio: "What do you want, jewels? I am a very extravagant man."
+  avatar: bio-photo-2.jpg
+  twitter: jincan39
+  google:
+    plus: jincan39
+
+cornelius_fiddlebone:
+  name: Cornelius Fiddlebone
+  email: cornelius@thewhip.com
+  bio: "I ordered what?"
+  avatar: bio-photo.jpg
+  twitter: rhymeswithsackit
+  google:
+    plus: CorneliusFiddlebone
+
+
+hawstein:
+  name: Hawstein
+  github: Hawstein
+  bio: "WanDou Lab."
+  avatar: bio-photo-2.jpg
+  
+xufei:
+  name: xufei
+  github: xufei
+  bio: "SuNing."
+  avatar: bio-photo-2.jpg
+  
+abruzzi:
+  name: Qiu Juntao
+  github: abruzzi
+  bio: "ThoughtWorks."
+  avatar: bio-photo-2.jpg
+
+
