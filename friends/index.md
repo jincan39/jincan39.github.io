@@ -14,11 +14,12 @@ comments: true
 <a markdown="0" target="_blank" href="http://blog.smdcn.net/" class="btn">smdcn</a>
 <a markdown="0" target="_blank" href="http://kymjs.com/" class="btn">kymjs</a>
 <a markdown="0" target="_blank" href="http://hmqk1995.github.io/" class="btn">hmqk1995</a>
-<a markdown="0" target="_blank" href="https://jincan39.github.io" class="btn btn-info">Chan</a>
 <a markdown="0" target="_blank" href="http://linsir.org/" class="btn btn-info">linsir树莓派</a>
 <!--<a markdown="0" target="_blank" href="https://github.com/jptiancai/jptiancai.github.com" class="btn btn-info">静态网站集合</a>-->
 <a markdown="0" target="_blank" href="http://markyun.github.io" class="btn btn-info">马云云</a>
 <a markdown="0" target="_blank" href="https://github.com/jptiancai/jptiancai.github.com" class="btn btn-info">静态网站集合</a>
+<a markdown="0" target="_blank" href="http://tinyclouds.org/" class="btn btn-info">Ryan Dahl</a>
+
 
 {% highlight html %}
 Comment below to exchange links.有朋自远方来，欢迎留言交流😊
