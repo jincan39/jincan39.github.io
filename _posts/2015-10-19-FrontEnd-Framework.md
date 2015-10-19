@@ -28,7 +28,7 @@ comments: true
 
 ![a2](http://images.cnitblog.com/blog/379494/201501/311719347845994.png)
 
-React的实现(非flux架构)
+### React的实现(非flux架构)
 
 ![react](http://images.cnitblog.com/blog/379494/201501/311719562062439.png)
 
