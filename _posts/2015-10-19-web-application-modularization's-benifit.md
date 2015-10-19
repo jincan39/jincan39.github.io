@@ -3,7 +3,7 @@ layout: post
 title: Web应用组件化的权衡
 excerpt: "Web application modularization's benifit."
 author: xufei
-modified: 2014-07-01
+modified: 2015-10-19
 tags: [web, model]
 comments: true
 ---
