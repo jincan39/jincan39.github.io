@@ -9,7 +9,6 @@ comments: true
 ---
 {% include _toc.html %}
 
-==
 
 # 1. 基本概念
 ---
@@ -195,7 +194,6 @@ Facebook对此问题提出了更暴力的解决方式，Relay和GraphQL，这两
 {% highlight html %}
 class CheckList extends List {
 }
-
 {% endhighlight %}
 我觉得有必要探讨一下这里这个extends，是不是一定要用这样的方式来实现一个形态类似原组件的新组件？
 
@@ -211,17 +209,13 @@ class CheckList extends List {
 
 还是用列表举例，比如我们有一个列表，可以用于选中，内部结构可能会搞成这样：
 
+{% highlight html %}
 <ul class="list">
     <li></li>
     <li class="selected"></li>
     <li></li>
     <li></li>
 </ul>
-
-{% highlight html %}
-class CheckList extends List {
-}
-
 {% endhighlight %}
 然后对外的形式这样：
 
