@@ -9,8 +9,6 @@ comments: true
 ---
 {% include _toc.html %}
 
-# 2015前端框架何去何从
-
 这篇文章将从 AngularJS ReactJS Polymer 这几个流行的框架入手，分析前端框架在这几年发展中的关键技术点，作为2015前端技术选型的参考。摘要:
 
 * 初体验
@@ -23,24 +21,24 @@ comments: true
 
 拿TODO来作为引子好了.
 
-[!http://images.cnitblog.com/blog/379494/201501/311719164257851.png]
+![http://images.cnitblog.com/blog/379494/201501/311719164257851.png]
 
 Angular 的实现
-[!http://images.cnitblog.com/blog/379494/201501/311719347845994.png]
-[!http://images.cnitblog.com/blog/379494/201501/311719347845994.png]
+![http://images.cnitblog.com/blog/379494/201501/311719347845994.png]
+![http://images.cnitblog.com/blog/379494/201501/311719347845994.png]
 
 React的实现(非flux架构)
 
-[!http://images.cnitblog.com/blog/379494/201501/311719562062439.png]
+![http://images.cnitblog.com/blog/379494/201501/311719562062439.png]
 
 Polymer的实现
 
-[!http://images.cnitblog.com/blog/379494/201501/311720106126205.png]
-[!http://images.cnitblog.com/blog/379494/201501/311720106126205.png]
+![http://images.cnitblog.com/blog/379494/201501/311720106126205.png]
+![http://images.cnitblog.com/blog/379494/201501/311720106126205.png]
 
 三者共同对比
 
-[!http://images.cnitblog.com/blog/379494/201501/311720256122788.png]
+![http://images.cnitblog.com/blog/379494/201501/311720256122788.png]
 
 在Angular中有controller和component的概念是分离的，而react和polymer中只有component的概念。
 
@@ -59,7 +57,7 @@ knockout/angular/avalon代表了三种方案:
 * dirty check。这是angular正在使用的机制，它并不能像前两种一样一旦数据发生变化立即触发更新回调。而是必须在调用了angular提供的一些方法，或者触发了页面上使用了ng-click等的元素上的事件后才会触发。这些触发时机是angular内部就已经实现了的，所以你几乎感觉不到。这种方法被称为"dirty"的原因是，它保存了所有属性上一次的值，检测是通过遍历对象的所有属性，对比它和上一次值是否一样来实现的。如果是深层对象的话，它会层层遍历。这种检测方式结合了上面两种的优势,但是对性能造成了负担。
 
 至此，两个关键技术点都已讲清楚，用一张图来回顾一下
-[!http://images.cnitblog.com/blog/379494/201501/311722170815444.png]
+![http://images.cnitblog.com/blog/379494/201501/311722170815444.png]
 
 而在React中则相对简单，React用的是类似于重绘的机制，当触发了 setState 之后，就完全重新渲染(并非立即触发，中间有类似于缓存的性能提升机制)。这看起来比起前面的方案简单粗暴，但是却因为virtual dom的实现化腐朽为神奇了。virtual dom指的是React内部用来模拟真实dom的一种数据对象。当重新渲染时，实际上是先生成这样virtual dom，然后将其和上一次的virtual dom进行对比，找出差异，最后由react在真实的dom上更新有差异的部分就够了。因为virtual dom始终在内存中，真实的dom操作非常少，而前面的几种框架在更新视图时常常会有大量的dom操作，因此react在性能上大大领先前一种类型的框架。同时也因为virtual dom仍然是标准的 js对象，所以使得"服务端渲染"也成为可能。
 值得注意的是，虽然React本身并不会像前面的框架一样深入的去检测数据的哪一部分发生了变化，但是可以通过官方提供的addon 和immutable.js来进一步提高这一块的性能。
@@ -82,11 +80,11 @@ react和其他框架的分歧其实目前看来并无优劣之分，因为webcom
   * 业务方不断要求给组件加功能怎么办?
 针对第一个问题，我所在的团队目前提出一个叫做"模板复写"的规则，这个规则又分为"完全重写"和"部分重写"两种规则:
 
-[!http://images.cnitblog.com/blog/379494/201501/311722538006027.png]
+![http://images.cnitblog.com/blog/379494/201501/311722538006027.png]
 
 部分重写
 
-[!http://images.cnitblog.com/blog/379494/201501/311723253319694.png]
+![http://images.cnitblog.com/blog/379494/201501/311723253319694.png]
 
 这种方案已在angular中实现。并且在组件重用率高的系统中已经验证非常实用。但它也有缺陷，缺陷在于你必须知道当前组件的实现方式和原有模板才能复写。
 
@@ -99,16 +97,16 @@ react和其他框架的分歧其实目前看来并无优劣之分，因为webcom
 
 "作用域共享"共享的方案是: 通过在一个特殊标记 "import-to" 将某一段外部html引入到某个组件中去一起参与"模板解析"和"数据绑定",当完成时再放回原来的位置。这样这个外部html就能获取到组件内部任何状态和数据了。这种方案看起来有点像hack，但其实只是换了一种方式来理解组件:组件分成两个部分，一是数据，二是视图。视图理论上应该只受到它的逻辑是否足够内聚的约束，而不应该受到它的子元素是否放在一起的约束。但是目前我们刚好使用了dom作为视图的基础，所以视图受到html结构的约束，这个约束是不合理的。我们来用图对比一下使用"作用域共享"前后的场景:
 
-[!http://images.cnitblog.com/blog/379494/201501/311724060038953.png]
+![http://images.cnitblog.com/blog/379494/201501/311724060038953.png]
 
 当然，这种方案的缺陷仍然是你必须知道组件的具体实现。但这并不是一个不可克服的缺陷，我们看下aurelia的设计，它将template等等关键部分都设计成了可插拔的形式，这种结构意味着未来有可能实现一种通用的模板语法来实现上述两个功能。这样就不再和底层耦合。
 
 ## 4. 应用架构
 
 应用架构的范围太广，我们这里只讨论那些已经很好地组件化了的应用，或者是没组件化但是有明确层级划分的应用。我们以React 对应的 FLUX 为切入点。 
-[!http://images.cnitblog.com/blog/379494/201501/311724189569177.png]
+![http://images.cnitblog.com/blog/379494/201501/311724189569177.png]
 我们再来结合facebook的官方FLUX代码示例来看看每个部分:
-[!http://images.cnitblog.com/blog/379494/201501/311724333785416.png]
+![http://images.cnitblog.com/blog/379494/201501/311724333785416.png]
 
 facebook在介绍FLUX的时候的主要观点是"MVC扩展性不够，FLUX可扩展性高"。暂且不去讨论FLUX与MVC的区别, 我们先来它是如何扩展的，从上面的代码中可以看到，ACTION不只是一个界面上的点击事件所产生的，ajax请求、甚至一个初始化过程都可以产生动作，"动作"只是一个抽象。动作将传递给dispatcher,有dispatcher在去触发store注册的回调。你可能会想，从这个dispatcher实际上什么也没干，这和我直接定义一个方法，触发事件就直接调用这个方法有什么区别?区别在于，当应用增加功能、进行扩展时，应用可能有多个部分要协同对同一个action进行响应，并且不同的协同部分可能在执行顺序上有严格的先后之分。
 
