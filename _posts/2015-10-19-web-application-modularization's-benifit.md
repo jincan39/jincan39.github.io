@@ -311,15 +311,19 @@ HTML本身的标签，其实做组件化是有些别扭的，这个原因在哪�
 在其他一些体系里并不存在这样的问题，比如WPF，比如Adobe Flex，因为他们没有这样的“历史负担”。
 
 另外一个方面，所谓的组件嵌套，从声明式代码的编写方式来看，就是标签的嵌套。标签嵌套的含义在UI层被赋予了更多潜规则，比如这个代码：
-
+{% highlight html %}
 <Panel>
   <Service/>
 </Panel>
-如果Service并非有UI展现的东西，而是像polymer里面的core-ajax那样，或者Adobe Flash体系里的WebService，你可以把它当做Panel实例里面的一个成员变量，然后设置它的属性或者调用方法。但是，对于更普通的情形：
+{% endhighlight %}
 
+如果Service并非有UI展现的东西，而是像polymer里面的core-ajax那样，或者Adobe Flash体系里的WebService，你可以把它当做Panel实例里面的一个成员变量，然后设置它的属性或者调用方法。但是，对于更普通的情形：
+{% highlight html %}
 <Panel>
   <Button></Button>
 </Panel>
+{% endhighlight %}
+
 同样的写法，这个含义一样吗？很明显不一样，因为Button也是一个可展示的组件，这时候你默认它是被放置在Panel的展现内部，作为它的可视化子元素的。也就是说，这时候，你不但在逻辑上把两者建立了关联，还要在布局上考虑它们的约束。
 
 如果你的外层元素是一个布局为主的容器，那好说，比如这里的Panel，我们默认它有一块展示区，所有子节点都放在里面以某种方式排版，或者flow，或者float，或者flex，甚至border-layout，东西南北中。
