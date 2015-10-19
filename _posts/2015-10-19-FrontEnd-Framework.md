@@ -23,7 +23,7 @@ comments: true
 
 ![todo](http://images.cnitblog.com/blog/379494/201501/311719164257851.png)
 
-Angular 的实现
+### Angular 的实现
 ![a1](http://images.cnitblog.com/blog/379494/201501/311719347845994.png)
 
 ![a2](http://images.cnitblog.com/blog/379494/201501/311719347845994.png)
@@ -32,12 +32,12 @@ React的实现(非flux架构)
 
 ![react](http://images.cnitblog.com/blog/379494/201501/311719562062439.png)
 
-Polymer的实现
+### Polymer的实现
 
 ![p1](http://images.cnitblog.com/blog/379494/201501/311720106126205.png)
 ![p2](http://images.cnitblog.com/blog/379494/201501/311720106126205.png)
 
-三者共同对比
+### 三者共同对比
 
 ![compare](http://images.cnitblog.com/blog/379494/201501/311720256122788.png)
 
