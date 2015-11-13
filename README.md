@@ -33,4 +33,4 @@
 
 <!--To learn how to install and use this theme check out the [Setup Guide](http://mmistakes.github.io/minimal-mistakes/theme-setup/) for more information.-->
 
-![Image of Yaktocat]http://static1.squarespace.com/static/55e5ac31e4b014cf448c24b5/t/55f0812ee4b0d45106c26271/1441825072662/?format=1000w)
+
