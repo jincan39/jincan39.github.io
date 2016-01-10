@@ -11,4 +11,4 @@ comments: true
 ============================
 
 很高兴见到你。
-![](https://raw.githubusercontent.com/FrontendMagazine/Works/master/images/twitter-heart/effect.gif
+![](https://raw.githubusercontent.com/FrontendMagazine/Works/master/images/twitter-heart/effect.gif)
