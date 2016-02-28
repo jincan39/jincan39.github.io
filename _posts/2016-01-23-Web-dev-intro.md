@@ -13,17 +13,14 @@ comments: true
 
 
 ### 趣文：[编程语言伪简史](http://www.oschina.net/news/41233/brief-incomplete-and-mostly-wrong)
+###  1. 概述： [一个网站的构造](http://www.1ke.co/course/30)
 
-
-1. 概述：
-               [一个网站的构造](http://www.1ke.co/course/30)
-
-2.正文
+###  2.正文
 
 核心：耦合度 ，开发效率的考虑
 大型程序的构建，敏捷开发和部署  需要保证各个功能模块相对独立；前后端也需要分离
 
-一.架构
+#### 一.架构
 单体式应用至微服务化的演变
 
 [单体式	:](http://dockerone.com/uploads/article/20150524/89d9bfed11ff35943269b24b23b866b1.png)
@@ -41,7 +38,7 @@ comments: true
 
 
 
-二.前后端
+#### 二.前后端
 
 **[MVC](https://zh.wikipedia.org/wiki/MVC)模式**（Model-View-Controller）
 一种[软件架构](https://zh.wikipedia.org/wiki/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84)模式，把软件系统分为三个基本部分：模型（Model）、视图（View）和控制器（Controller）。
@@ -69,7 +66,7 @@ comments: true
 
 
 
-三.如何完成前后端分离
+#### 三.如何完成前后端分离
               前后端分离的例子就是SPA(Single-page application)，所有用到的展现数据都是后端通过异步接口(AJAX/JSONP)的方式提供的，前端只管展现。（这句话可以翻译成**用了前端框架，并使用了Restful的架构思想**）
               从某种意义上来说，SPA（有哪些前端框架可以做SPA？请看：http://todomvc.com/）确实做到了前后端分离，但这种方式存在两个问题：
 * WEB服务中，SPA类占的比例很少。很多场景下还有同步/同步+异步混合的模式，SPA不能作为一种通用的解决方案。
@@ -83,7 +80,7 @@ comments: true
 Nodejs双11稳定性：https://www.zhihu.com/question/37379084
 
 
-四.[前端发展 ](http://chan.science/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF%E7%9A%84%E5%8F%91%E5%B1%95/)
+#### 四.[前端发展 ](http://chan.science/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF%E7%9A%84%E5%8F%91%E5%B1%95/)
 对于前端：
 jQuery的思维方式是：以DOM操作为中心
 MV*框架的思维方式是：以模型为中心，DOM操作只是附加
@@ -153,8 +150,7 @@ Vue：
 
 
 
-最后：由于前端仍然在一个快速发展期，所以我们需要更多的是有能力，创新和冒险精神的工程师们
+#### 最后：由于前端仍然在一个快速发展期，所以我们需要更多的是有能力，创新和冒险精神的工程师们
 
 ps:**对于移动开发  **
 移动应用开发领域有一个BaaS(后端即服务：[Backend as a Service](http://baike.baidu.com/link?url=ddIZmWYWygM5J9Ms24kLsEPF1ay2Gq4tRcwih2zQ1r_wwXWpR-0dCZ3V0pJ0BpvByd6xyu5RQqRiiHHZM1OXw_))的概念。这些集成服务包括：账户管理、消息推送、社交网络整合、地理位置与广告等。
-
