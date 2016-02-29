@@ -9,9 +9,6 @@ comments: true
 {% include _toc.html %}
 
 
-## 网站开发普及
-
-
 ### 趣文：[编程语言伪简史](http://www.oschina.net/news/41233/brief-incomplete-and-mostly-wrong)
 ###  1. 概述： [一个网站的构造](http://www.1ke.co/course/30)
 
@@ -67,12 +64,13 @@ comments: true
 
 
 #### 三.如何完成前后端分离
-              前后端分离的例子就是SPA(Single-page application)，所有用到的展现数据都是后端通过异步接口(AJAX/JSONP)的方式提供的，前端只管展现。（这句话可以翻译成**用了前端框架，并使用了Restful的架构思想**）
-              从某种意义上来说，SPA（有哪些前端框架可以做SPA？请看：http://todomvc.com/）确实做到了前后端分离，但这种方式存在两个问题：
-* WEB服务中，SPA类占的比例很少。很多场景下还有同步/同步+异步混合的模式，SPA不能作为一种通用的解决方案。
-* 现阶段的SPA开发模式，接口通常是按照展现逻辑来提供的，有时候为了提高效率，后端会帮我们处理一些展现逻辑，这就意味着后端还是涉足了View层的工作，不是真正的前后端分离。
-          在业务逻辑复杂的系统里，我们最怕维护前后端混杂在一起的代码，因为没有约束，M-V-C每一层都可能出现别的层的代码，日积月累，完全没有维护性可言。
-          虽然前后端分离没办法完全解决这种问题，但是可以大大缓解。因为从物理层次上保证了你不可能这么做。
+
+- 前后端分离的例子就是SPA(Single-pageapplication)，所有用到的展现数据都是后端通过异步接口(AJAX/JSONP)的方式提供的，前端只管展现。（这句话可以翻译成**用了前端框架，并使用了Restful的架构思想**）
+- 从某种意义上来说，SPA（有哪些前端框架可以做SPA？请看：http://todomvc.com/）确实做到了前后端分离，但这种方式存在两个问题：
+- WEB服务中，SPA类占的比例很少。很多场景下还有同步/同步+异步混合的模式，SPA不能作为一种通用的解决方案。
+- 现阶段的SPA开发模式，接口通常是按照展现逻辑来提供的，有时候为了提高效率，后端会帮我们处理一些展现逻辑，这就意味着后端还是涉足了View层的工作，不是真正的前后端分离。
+    在业务逻辑复杂的系统里，我们最怕维护前后端混杂在一起的代码，因为没有约束，M-V-C每一层都可能出现别的层的代码，日积月累，完全没有维护性可言。
+    虽然前后端分离没办法完全解决这种问题，但是可以大大缓解。因为从物理层次上保证了你不可能这么做。
 因此，淘宝引入了Nodejs来做Node的全栈开发，并将之作为”中途岛”：（虽然nodejs可以做全栈，为了保证物理层次上的分离，而且淘宝基于JAVA的基础架构已经非常强大而且稳定，更适合做现在架构的事情。）
 
  
@@ -80,23 +78,21 @@ comments: true
 Nodejs双11稳定性：https://www.zhihu.com/question/37379084
 
 
-#### 四.[前端发展 ](http://chan.science/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF%E7%9A%84%E5%8F%91%E5%B1%95/)
+#### 四. [前端发展](http://chan.science/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF%E7%9A%84%E5%8F%91%E5%B1%95/)
 对于前端：
 jQuery的思维方式是：以DOM操作为中心
 MV*框架的思维方式是：以模型为中心，DOM操作只是附加
 
 
-Facebook认为MVC无法满足他们的扩展需求，因此他们决定使用另一种模式：[Flux] (http://www.tuicool.com/articles/MjUrMn)。
-          这一思想上文中说到的前后端MVC架构中引入Service层很像，因为程序员在开发过程中控制层（Control）和服务层（Service）常常混淆不清，导致的模块间耦合度过高，后续推动困难。
-
-他们重新发明了真正的MVC，并且强调了数据单向流的概念。
-
-          Flux 通过严格的控制数据的更新来实现单向数据流，消除了数据双向绑定的Side Effect，这样的好处是你能清晰的掌握数据的改变方式及相应代码的位置。保证自己的程序不会因为业务的发展变得越来越臃肿。（试想在一个项目有几十上百个 Component 的情况下每个 Component 都可能改变了数据，那处理起来可就麻烦大了！）
-目前Flux的解决方案有如下：https://github.com/voronianski/flux-comparison
+- Facebook认为MVC无法满足他们的扩展需求，因此他们决定使用另一种模式：[Flux] (http://www.tuicool.com/articles/MjUrMn)。
+- 这一思想上文中说到的前后端MVC架构中引入Service层很像，因为程序员在开发过程中控制层（Control）和服务层（Service）常常混淆不清，导致的模块间耦合度过高，后续推动困难。
+- 他们重新发明了真正的MVC，并且强调了数据单向流的概念。 Flux 通过严格的控制数据的更新来实现单向数据流，消除了数据双向绑定的Side Effect，这样的好处是你能清晰的掌握数据的改变方式及相应代码的位置。保证自己的程序不会因为业务的发展变得越来越臃肿。（试想在一个项目有几十上百个 Component 的情况下每个 Component 都可能改变了数据，那处理起来可就麻烦大了！）
+- 目前Flux的解决方案有如下：https://github.com/voronianski/flux-comparison
 
 [React](http://reactjs.cn/react/docs/why-react.html)：
-             React 是一个 Facebook 和 Instagram 用来创建用户界面的 JavaScript 库。他仅仅是View层，并使用了Virtual DOM的技术。
-            通过 React 你唯一要做的事情就是构建组件。得益于其良好的封装性，组件使代码复用、测试和关注分离（separation of concerns）更加简单。
+
+  - React 是一个 Facebook 和 Instagram 用来创建用户界面的 JavaScript 库。他仅仅是View层，并使用了Virtual DOM的技术。
+  -  通过 React 你唯一要做的事情就是构建组件。得益于其良好的封装性，组件使代码复用、测试和关注分离（separation of concerns）更加简单。
 
 React信奉** **[Unix 哲学](https://en.wikipedia.org/wiki/Unix_philosophy) ，而Unix 已接受住了时间的考验，原因是：
 
