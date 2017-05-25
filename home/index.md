@@ -7,7 +7,6 @@ tags: [Jekyll, theme, responsive, blog, template]
 channing's home
 
 
-
 <!-- image:
   feature: NYR_3815_0004.jpg
   credit: Channing's pic
