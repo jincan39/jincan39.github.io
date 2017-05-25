@@ -319,12 +319,6 @@ From the theme's root, use `grunt` concatenate JavaScript files, and optimize .j
 
 ---
 
-## Questions?
-
-Found a bug or aren't quite sure how something works? By all means Ping me on Twitter [@mmistakes](http://twitter.com/mmistakes) or [file a GitHub Issue](https://github.com/mmistakes/minimal-mistakes/issues/new). And if you make something cool with this theme feel free to let me know.
-
----
-
 ## License
 
 This theme is free and open source software, distributed under the MIT License. So feel free to use this Jekyll theme on your site without linking back to me or including a disclaimer.

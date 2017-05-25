@@ -5,7 +5,6 @@ title:
 locale:
 url:
 
-
 # Jekyll configuration
 
 permalink:   /:categories/:title/
@@ -27,16 +26,15 @@ kramdown:
 
 # Site owner
 owner:
-  name: Channing
+  name: Chan
   avatar: photo.jpg
   bio: "Helo.<br /> This is A developer just graduated and from Shanghai."
   email: jincan39@163.com
-  duoshuo-shortname: true
-  disqus-shortname:
+  disqus-shortname: false
   twitter: #username
   facebook: #username
   google:
-    plus: #username
+    plus:
     analytics:
     verify:
     ad-client:
@@ -58,8 +56,7 @@ owner:
   soundcloud: #username
   weibo: #1287554400
   flickr: # username
-  codepen: #username
-  
+
 
 
 include: [".htaccess"]

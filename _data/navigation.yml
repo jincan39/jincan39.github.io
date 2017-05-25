@@ -1,23 +1,15 @@
 # Site navigation links
 
 - title: 首页
-  url: /home/
-  
+  url: /
+
 - title: 关于
   url: /about/
 
 - title: 所有文章
   url: /posts/
-  
-- title: 留言板
-  url: /friends/
-  
+
 - title: Jekyll教程
   url: /theme-setup/
-  
-# - title: 个人网站
-#   url: https://github.com/jincan39
 
-# - title: 测试
-#   url: /Test/ 
 
